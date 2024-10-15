@@ -13,14 +13,14 @@ export const kolobok = (name) => {
     }
 };
 
-export const newYear = (cristmasName) => {
-    switch (cristmasName) {
+export const newYear = (christmasName) => {
+    switch (christmasName) {
         case 'Снегурочка': 
         case 'Дед Мороз': 
-            console.log(`${cristmasName}! ${cristmasName}! ${cristmasName}!`);
+            console.log(`${christmasName}! ${christmasName}! ${christmasName}!`);
             break;
         default: 
-        console.log(`${cristmasName}!`);
+        console.log(`${christmasName}!`);
             break;
     }
 };
