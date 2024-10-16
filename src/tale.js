@@ -1,6 +1,8 @@
 export const kolobok = (name) => {
     switch (name) {
         case 'дедушка': 
+            console.log('Я от   дедушки ушёл');
+            break;
         case 'заяц': 
             console.log('Я от зайца ушёл');
             break;
