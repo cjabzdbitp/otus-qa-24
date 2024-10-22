@@ -1,48 +1,48 @@
-import { nameIsValid, fullTrim, getTotal } from '../src/app.js'
+import { nameIsValid, fullTrim, getTotal } from '../src/app.js';
 
 describe('Name validation function', () => {
   it('should return true for valid name', () => {
-    const result = nameIsValid('bun')
-    expect(result).toEqual(true)
-  })
+    const result = nameIsValid('bun');
+    expect(result).toEqual(true);
+  });
 
   it('should return false for name with incorrect type', () => {
-    const result = nameIsValid(123)
-    expect(result).toEqual(false)
-  })
+    const result = nameIsValid(123);
+    expect(result).toEqual(false);
+  });
 
   it('should return false for name with insufficient length', () => {
-    const result = nameIsValid('s')
-    expect(result).toEqual(false)
-  })
+    const result = nameIsValid('s');
+    expect(result).toEqual(false);
+  });
 
   it('should return false for name not matching regular expression', () => {
-    const result = nameIsValid('bun!')
-    expect(result).toEqual(false)
-  })
-})
+    const result = nameIsValid('bun!');
+    expect(result).toEqual(false);
+  });
+});
 
 describe('Full trim function', () => {
   it('should return text without space in the beginning', () => {
-    const result = fullTrim(' bun')
-    expect(result).toEqual('bun')
-  })
+    const result = fullTrim(' bun');
+    expect(result).toEqual('bun');
+  });
 
   it('should return text without space in the end', () => {
-    const result = fullTrim('bun ')
-    expect(result).toEqual('bun')
-  })
+    const result = fullTrim('bun ');
+    expect(result).toEqual('bun');
+  });
 
   it('should return text without space in the beginning and in the end', () => {
-    const result = fullTrim(' bun ')
-    expect(result).toEqual('bun')
-  })
+    const result = fullTrim(' bun ');
+    expect(result).toEqual('bun');
+  });
 
   it('should return text as original when there are no spaces', () => {
-    const result = fullTrim('bun!')
-    expect(result).toEqual('bun!')
-  })
-})
+    const result = fullTrim('bun!');
+    expect(result).toEqual('bun!');
+  });
+});
 
 describe('Get total function', () => {
   const validDiscount = [
@@ -67,12 +67,12 @@ describe('Get total function', () => {
       discount: 0,
       expected: 100
     }
-  ]
+  ];
 
   test.each(validDiscount)('$name', ({ items, discount, expected }) => {
-    const result = getTotal(items, discount)
-    expect(result).toBeCloseTo(expected, 1)
-  })
+    const result = getTotal(items, discount);
+    expect(result).toBeCloseTo(expected, 1);
+  });
 
   const invalidDiscount = [
     {
@@ -93,9 +93,9 @@ describe('Get total function', () => {
       discount: 'one',
       expectedError: 'Скидка должна быть числом'
     }
-  ]
+  ];
 
   test.each(invalidDiscount)('$name', ({ items, discount, expectedError }) => {
-    expect(() => getTotal(items, discount)).toThrow(expectedError)
-  })
-})
+    expect(() => getTotal(items, discount)).toThrow(expectedError);
+  });
+});
