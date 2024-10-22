@@ -1,4 +1,4 @@
-import { kolobok, newYear } from './tale.js'
+import { kolobok, newYear } from './tale.js';
 
-console.log(kolobok('волк'))
-console.log(newYear('Снегурочка'))
+console.log(kolobok('волк'));
+console.log(newYear('Снегурочка'));
