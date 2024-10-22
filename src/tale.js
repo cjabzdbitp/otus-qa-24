@@ -1,17 +1,13 @@
 export const kolobok = name => {
   switch (name) {
     case 'дедушка':
-      console.log('Я от   дедушки ушёл')
-      break
+      return 'Я от дедушки ушёл'
     case 'заяц':
-      console.log('Я от зайца ушёл')
-      break
+      return 'Я от зайца ушёл'
     case 'лиса':
-      console.log('От лисы не ушёл')
-      break
+      return 'От лисы не ушёл'
     default:
-      console.log(`Я от ${name} ушёл`)
-      break
+      return `Я от ${name} ушёл`
   }
 }
 
@@ -19,10 +15,8 @@ export const newYear = christmasName => {
   switch (christmasName) {
     case 'Снегурочка':
     case 'Дед Мороз':
-      console.log(`${christmasName}! ${christmasName}! ${christmasName}!`)
-      break
+      return `${christmasName}! ${christmasName}! ${christmasName}!`
     default:
-      console.log(`${christmasName}!`)
-      break
+      return `${christmasName}!`
   }
 }

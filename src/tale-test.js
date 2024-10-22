@@ -1,5 +1,4 @@
 import { kolobok, newYear } from './tale.js'
 
-kolobok('волк')
-
-newYear('Снегурочка')
+console.log(kolobok('волк'))
+console.log(newYear('Снегурочка'))
