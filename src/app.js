@@ -38,3 +38,29 @@ export const getTotal = (items = [], discount = 0) => {
   const total = items.reduce((acc, { price, quantity }) => acc + price * quantity, 0);
   return total * (1 - discount / 100);
 };
+
+/**
+ * Вычисляет общую сумму значений в объекте scores.
+ *
+ * @param {Object} scores - Объект, содержащий пары "ключ-значение", где значение — число.
+ * @param {number} scores[key] - Числовое значение, представляющее счёт для каждого ключа.
+ * @returns {number} Общая сумма всех значений в объекте scores.
+ *
+ * @example
+ * const scores = {
+ *   Anna: 10,
+ *   Olga: 1,
+ *   Ivan: 5
+ * };
+ * const total = getScore(scores);
+ * console.log(total); // 16
+ */
+export const getScore = (scores = {}) => {
+  let totalSum = 0;
+
+  for (let key in scores) {
+    totalSum += scores[key];
+  }
+
+  return totalSum;
+};
