@@ -19,7 +19,7 @@
     "@babel/node": "^7.25.7",
     "@babel/preset-env": "^7.25.8",
     "@eslint/js": "^9.13.0",
-    "@faker-js/faker": "^9.0.3",
+    "@faker-js/faker": "^9.1.0",
     "babel-jest": "^29.7.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest": "^28.8.3",
