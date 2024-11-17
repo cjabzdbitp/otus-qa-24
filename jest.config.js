@@ -1,9 +1,6 @@
 const config = {
-  testEnvironment: 'node', // Можно оставить 'jsdom' для эмуляции браузера, если это необходимо
-  transform: {
-    '^.+\\.js$': 'babel-jest'
-  },
-  testMatch: ['**/specs/**/*.spec.js'], // Пути к тестам
+  testEnvironment: 'node',
+  testMatch: ['**/specs/**/*.spec.js'],
   coverageProvider: 'v8',
   reporters: [['github-actions', { silent: false }], 'summary']
 };
