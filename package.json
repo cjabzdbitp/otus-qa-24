@@ -10,10 +10,11 @@
     "lint": "eslint . --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md}\"",
     "test": "jest",
-    "allure:ci": "allure generate allure-results --clean && allure open",
-    "allure:generate": "allure generate allure-results --clean"
+    "allure:ci": "allure generate allure-results --clean",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report"
   },
-  "author": "Your Name",
+  "author": "otus-homework",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.25.7",
