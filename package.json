@@ -9,7 +9,9 @@
     "lint:ci": "eslint .",
     "lint": "eslint . --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md}\"",
-    "test": "jest"
+    "test": "jest",
+    "allure:ci": "allure generate allure-results --clean && allure open",
+    "allure:generate": "allure generate allure-results --clean"
   },
   "author": "Your Name",
   "license": "MIT",
@@ -32,6 +34,7 @@
     "prettier": "^3.3.3"
   },
   "dependencies": {
-    "axios": "^1.7.7"
+    "axios": "^1.7.7",
+    "allure-commandline": "^2.20.1"
   }
 }
