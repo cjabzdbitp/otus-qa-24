@@ -1,20 +1,22 @@
 const config = {
-  testEnvironment: 'node',
   testMatch: ['**/specs/**/*.spec.js'],
   coverageProvider: 'v8',
   reporters: [
+    'default',
     ['github-actions', { silent: false }],
     'summary',
     [
-      'jest-html-reporter',
+      'jest-html-reporters',
       {
-        pageTitle: 'Test Report',
-        outputPath: './reports/test-report.html',
-        includeFailureMsg: true,
-        includeSuiteFailure: true
+        publicPath: './reports/html-report',
+        filename: 'index.html'
       }
     ]
-  ]
+  ],
+  testEnvironment: 'allure-jest/node',
+  testEnvironmentOptions: {
+    resultsDir: 'reports/allure-results'
+  }
 };
 
 export default config;
