@@ -1,11 +1,4 @@
-import axios from 'axios';
-import config from '../config/config.js';
-
-const apiClient = axios.create({
-  baseURL: config.baseURL,
-  headers: { 'Content-Type': 'application/json' },
-  validateStatus: () => true
-});
+import { apiClient } from './apiClient.js';
 
 export async function createUser({ userName, password }) {
   const response = await apiClient.post('/Account/v1/User', {
