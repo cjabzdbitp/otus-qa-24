@@ -1,29 +1,20 @@
-import { defineConfig, devices } from '@playwright/test'
+import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './e2e-otus', 
-  fullyParallel: false, 
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  
-  reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['junit', { outputFile: 'playwright-report/results.xml' }]
-  ], 
-
+  testDir: './e2e', 
+  timeout: 50000, 
+  retries: 1, 
   use: {
-    baseURL: 'https://rwa-194.87.102.103.sslip.io',
-    trace: 'on-first-retry',
-    launchOptions: {
-      slowMo: parseInt(process.env.PLAYWRIGHT_SLOW_MO ?? '0') 
-    }
+    headless: true, 
+    viewport: { width: 1280, height: 720 }, 
+    baseURL: 'https://www.saucedemo.com', 
+    actionTimeout: 8000, 
+    screenshot: 'only-on-failure', 
   },
-
   projects: [
     {
-      name: 'chromium', 
-      use: { ...devices['Desktop Chrome'] } 
-    }
-  ]
+      name: 'Chromium',
+      use: { browserName: 'chromium' }, 
+    },
+  ],
 });
