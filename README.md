@@ -13,3 +13,13 @@ To execute the test suite:
 ```bash
 npm run test
 ```
+
+To use ci for install dependencies and run tests:
+```bash
+npm ci
+```
+
+To install Playwright dependencies:
+```bash
+npx playwright install --with-deps
+```
