@@ -15,7 +15,7 @@ export const config: CodeceptJS.MainConfig = {
   },
   gherkin: {
     features: './e2e/features/registration.feature',
-    steps: ['./e2e/steps/registration.steps.ts'],
+    steps: './e2e/steps/registration.steps.ts',
   },
   include: {
     I: './steps_file.ts',
