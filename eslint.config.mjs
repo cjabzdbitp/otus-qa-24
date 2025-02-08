@@ -1,7 +1,7 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import jest from "eslint-plugin-jest";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import jest from 'eslint-plugin-jest';
 
 export default [
   {
@@ -9,9 +9,9 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.jest, 
-      },
-    },
+        ...globals.jest
+      }
+    }
   },
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
@@ -20,8 +20,8 @@ export default [
     ...jest.configs['flat/recommended'],
     languageOptions: {
       globals: {
-        ...globals.jest, 
-      },
-    },
-  },
+        ...globals.jest
+      }
+    }
+  }
 ];
