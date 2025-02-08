@@ -1,5 +1,5 @@
 export const config = {
-    baseUrl: "https://petstore.swagger.io/v2"
+  baseUrl: 'https://petstore.swagger.io/v2'
 };
 
 export const petUrl = config.baseUrl;
