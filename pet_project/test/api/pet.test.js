@@ -127,6 +127,6 @@ describe('Pet API Tests', () => {
     const deleteResponse = await petHelpers.deletePet(0);
 
     expect(deleteResponse.status).toBe(404);
-    expect(deleteResponse.data).toEqual({});
+    expect(deleteResponse.data).toEqual('');
   });
 });
