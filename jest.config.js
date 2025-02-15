@@ -1,5 +1,5 @@
 const config = {
-  testMatch: ['**/specs/**/*.spec.js'],
+  testMatch: ['**/specs/**/*.spec.js', '**/pet_project/test/api/**/*.test.js'],
   coverageProvider: 'v8',
   reporters: [
     'default',
